@@ -1,12 +1,12 @@
 package com.example.Intrasoft.data;
-
-
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.lang.reflect.Type;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-
 @Entity
 @Data
 @Getter
@@ -14,21 +14,22 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
+@Table(name = "Transaction")
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private Double amount;
-    private LocalDateTime transactionDate;
+    private Long transactionId;
 
     @ManyToOne
-    @JoinColumn(name = "account_id")
+    @JoinColumn(name = "account_id")  // Specify the foreign key column
     private Account account;
 
-    private String type;  // "deposit" or "withdrawal"
+    @Column(name = "type")  // Add the type field here
+    private String type;
 
-    public Double getAmount() {
-        return amount;
-    }
+    @Column(name = "transaction_date")
+    private LocalDateTime transactionDate;  // Use @Column for basic fields
+
+    @Column(name = "amount")
+    private Double amount;
 }

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/beneficiaries")
+@RequestMapping("/api/1.0/beneficiaries")
 public class BeneficiaryController {
 
     private final BeneficiaryService service;
