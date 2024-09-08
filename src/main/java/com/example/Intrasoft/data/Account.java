@@ -14,11 +14,11 @@ import java.util.List;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
     private Double balance;
-
     @Column(name = "beneficiary_id")
-    private Long beneficiaryId;
+    private Long beneficiary_id;
     @ManyToOne
     @JoinColumn(name = "beneficiaryid", referencedColumnName = "id")
     private Beneficiary beneficiary;

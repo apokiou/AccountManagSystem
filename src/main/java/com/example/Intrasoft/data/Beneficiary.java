@@ -12,16 +12,16 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
-@Table(name = "Beneficiary")
+@Table(name = "beneficiary")
 public class Beneficiary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(name = "first_name")
-    private String firstName;
+    private String first_Name;
 
     @Column(name = "last_name")
-    private String lastName;
+    private String last_Name;
 
     @OneToMany(mappedBy = "beneficiary")
     private List<Account> accounts;

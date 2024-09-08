@@ -7,6 +7,7 @@ This project is an Account Management System built with Spring Boot, designed to
 
 - **Spring Boot:** A Java-based framework used for building standalone and production-ready Spring applications.
 - **PostgreSQL:** An open-source relational database system.
+- **Flyway:** Database Migration
 - **Docker:** A platform for developing, shipping, and running applications in containers.
     - **Docker Compose:** A tool for defining and running multi-container Docker applications.
     - **Dockerfile:** A script containing instructions on how to build a Docker image.

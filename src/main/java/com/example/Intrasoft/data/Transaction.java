@@ -21,14 +21,14 @@ public class Transaction {
     private Long transactionId;
 
     @ManyToOne
-    @JoinColumn(name = "account_id")  // Specify the foreign key column
+    @JoinColumn(name = "account_id")
     private Account account;
 
-    @Column(name = "type")  // Add the type field here
+    @Column(name = "type")
     private String type;
 
     @Column(name = "transaction_date")
-    private LocalDateTime transactionDate;  // Use @Column for basic fields
+    private LocalDateTime transactionDate;
 
     @Column(name = "amount")
     private Double amount;
